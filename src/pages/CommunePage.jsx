@@ -133,7 +133,7 @@ export default function CommunePage() {
         </div>
       </section>
 
-      <CommunePhotoGallery commune={commune.name} />
+      <CommunePhotoGallery commune={commune.name} slug={slug} />
       <FAQSection faqs={content.faqs} title={`FAQ — Couvreur ${commune.name}`} />
       <CTABand title={`Couvreur à ${commune.name} — Devis Gratuit`} />
     </>
