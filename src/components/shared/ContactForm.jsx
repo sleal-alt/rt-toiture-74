@@ -17,18 +17,19 @@ export default function ContactForm({ source = "contact", compact = false }) {
     setSending(true);
     await base44.integrations.Core.SendEmail({
       to: "maldinireinhardt74@gmail.com",
-      subject: `Nouvelle demande de devis — ${form.nom} — ${form.service || "Non précisé"}`,
-      body: `
+      subject: `Nouvelle demande de devis – RT Toiture 74 – ${form.nom}`,
+      body: `Nouvelle demande de devis reçue via le site RT Toiture 74
+
 Nom : ${form.nom}
 Téléphone : ${form.telephone}
-Email : ${form.email}
-Service : ${form.service || "Non précisé"}
-Ville : ${form.ville || "Non précisé"}
+Email : ${form.email || "Non renseigné"}
+Ville : ${form.ville || "Non renseignée"}
+Prestation demandée : ${form.service || "Non précisée"}
+Date de la demande : ${new Date().toLocaleDateString("fr-FR", { day: "2-digit", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit" })}
 Source : ${source}
 
 Message :
-${form.message}
-      `.trim(),
+${form.message}`,
     });
     setSent(true);
     setSending(false);
@@ -39,7 +40,7 @@ ${form.message}
       <div className="text-center py-10">
         <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
         <h3 className="font-heading text-2xl font-bold mb-2">Demande envoyée !</h3>
-        <p className="text-muted-foreground">Nous vous recontactons sous 24h maximum.</p>
+        <p className="text-muted-foreground">Votre demande a bien été envoyée. Nous vous recontactons rapidement.</p>
       </div>
     );
   }

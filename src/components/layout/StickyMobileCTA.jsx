@@ -20,7 +20,7 @@ export default function StickyMobileCTA() {
       {/* Secondary actions */}
       <div className="grid grid-cols-2 divide-x divide-border/30 bg-accent/95 backdrop-blur-md border-t border-border/30">
         <a
-          href={COMPANY.whatsapp}
+          href={`https://wa.me/33669434142?text=${encodeURIComponent("Bonjour, je souhaite obtenir un devis pour ma toiture.")}`}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center gap-2 py-3 text-green-400 hover:bg-green-500/10 transition"

@@ -30,7 +30,7 @@ export default function HeroSection({ heroImage }) {
 
       {/* Floating WhatsApp */}
       <a
-        href={`https://wa.me/${COMPANY.phone.replace(/\s/g, "")}`}
+        href={`https://wa.me/33669434142?text=${encodeURIComponent("Bonjour, je souhaite obtenir un devis pour ma toiture.")}`}
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-24 right-5 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#20b558] rounded-full shadow-2xl flex items-center justify-center transition-transform hover:scale-110"
