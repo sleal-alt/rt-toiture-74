@@ -29,16 +29,32 @@ const ALL_PHOTOS = [
   { url: IMAGES.beforeAfter, alt: "Avant après rénovation toiture Haute-Savoie résultat professionnel", label: "Avant / après rénovation" },
 ];
 
-// Génère un offset déterministe à partir du slug pour avoir des photos différentes par page
-function getSlugOffset(slug) {
+// Hash déterministe du slug → entier
+function hashSlug(slug) {
   if (!slug) return 0;
-  return slug.split("").reduce((acc, c) => acc + c.charCodeAt(0), 0);
+  let h = 0;
+  for (let i = 0; i < slug.length; i++) {
+    h = (Math.imul(31, h) + slug.charCodeAt(i)) | 0;
+  }
+  return Math.abs(h);
+}
+
+// Mélange déterministe du tableau (Fisher-Yates avec seed)
+function seededShuffle(arr, seed) {
+  const a = [...arr];
+  let s = seed;
+  for (let i = a.length - 1; i > 0; i--) {
+    s = (Math.imul(1664525, s) + 1013904223) | 0;
+    const j = Math.abs(s) % (i + 1);
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
 }
 
 export default function CommunePhotoGallery({ commune, slug }) {
-  const offset = getSlugOffset(slug);
-  // Sélectionne 4 photos uniques décalées selon le slug
-  const photos = Array.from({ length: 4 }, (_, i) => ALL_PHOTOS[(offset + i * 5) % ALL_PHOTOS.length]);
+  const seed = hashSlug(slug);
+  // Mélange tout le pool de façon unique par commune, prend les 4 premiers
+  const photos = seededShuffle(ALL_PHOTOS, seed).slice(0, 4);
 
   return (
     <section className="py-12 bg-muted/30">
