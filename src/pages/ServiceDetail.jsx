@@ -8,6 +8,9 @@ import FAQSection from "@/components/shared/FAQSection";
 import ContactForm from "@/components/shared/ContactForm";
 import { Phone, Check, ArrowRight, Shield, Clock, Award, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ExpertiseBlock from "@/components/service/ExpertiseBlock";
+import ProcessBlock from "@/components/service/ProcessBlock";
+import InternalLinksBlock from "@/components/service/InternalLinksBlock";
 
 const SERVICE_CONTENT = {
   "demoussage-nettoyage-toiture": {
@@ -237,19 +240,9 @@ export default function ServiceDetail() {
         </div>
       </section>
 
-      {/* Other services */}
-      <section className="py-12 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="font-heading text-2xl font-bold mb-6">Nos Autres Services</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {SERVICES.filter(s => s.slug !== slug).map(s => (
-              <Link key={s.slug} to={`/services/${s.slug}`} className="p-4 bg-card rounded-xl border border-border/50 hover:border-primary/30 hover:shadow-sm transition text-center">
-                <p className="font-medium text-sm">{s.shortTitle}</p>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ExpertiseBlock slug={slug} serviceName={service.shortTitle} />
+      <ProcessBlock slug={slug} />
+      <InternalLinksBlock slug={slug} serviceName={service.shortTitle} />
 
       {content.faqs && <FAQSection faqs={content.faqs} title={`FAQ — ${service.shortTitle}`} />}
       <CTABand title={`Besoin d'un ${service.shortTitle.toLowerCase()} en Haute-Savoie ?`} />
