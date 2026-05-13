@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Block technical/utility paths
+Disallow: /api/
+Disallow: /*.json$
+
+Sitemap: https://haute-savoie-toiture-74.fr/sitemap.xml

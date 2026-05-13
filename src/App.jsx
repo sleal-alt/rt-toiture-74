@@ -18,7 +18,10 @@ import APropos from './pages/APropos';
 import Blog from './pages/Blog';
 import CommunePage from './pages/CommunePage';
 import MentionsLegales from './pages/MentionsLegales';
+import PolitiqueConfidentialite from './pages/PolitiqueConfidentialite';
+import PolitiqueCookies from './pages/PolitiqueCookies';
 import PlanDuSite from './pages/PlanDuSite';
+import CookieBanner from './components/shared/CookieBanner';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -54,7 +57,8 @@ const AuthenticatedApp = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/couvreur/:slug" element={<CommunePage />} />
         <Route path="/mentions-legales" element={<MentionsLegales />} />
-        <Route path="/politique-confidentialite" element={<MentionsLegales />} />
+        <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
+        <Route path="/cookies" element={<PolitiqueCookies />} />
         <Route path="/plan-du-site" element={<PlanDuSite />} />
         <Route path="*" element={<PageNotFound />} />
       </Route>
@@ -68,6 +72,7 @@ function App() {
       <AuthProvider>
         <QueryClientProvider client={queryClientInstance}>
           <AuthenticatedApp />
+          <CookieBanner />
           <Toaster />
         </QueryClientProvider>
       </AuthProvider>

@@ -25,6 +25,8 @@ export default function PlanDuSite() {
                   { label: "Contact", path: "/contact" },
                   { label: "Devis Gratuit", path: "/devis" },
                   { label: "Mentions Légales", path: "/mentions-legales" },
+                  { label: "Politique de Confidentialité", path: "/politique-confidentialite" },
+                  { label: "Cookies", path: "/cookies" },
                 ].map(l => (
                   <li key={l.path}><Link to={l.path} className="text-primary hover:underline">{l.label}</Link></li>
                 ))}

@@ -98,9 +98,10 @@ export default function Footer() {
       <div className="border-t border-border/20">
         <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-muted-foreground">
           <p>© 2025 {COMPANY.name} — SIRET {COMPANY.siret}</p>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-4">
             <Link to="/mentions-legales" className="hover:text-primary transition">Mentions légales</Link>
-            <Link to="/politique-confidentialite" className="hover:text-primary transition">Politique de confidentialité</Link>
+            <Link to="/politique-confidentialite" className="hover:text-primary transition">Confidentialité</Link>
+            <Link to="/cookies" className="hover:text-primary transition">Cookies</Link>
             <Link to="/plan-du-site" className="hover:text-primary transition">Plan du site</Link>
           </div>
         </div>

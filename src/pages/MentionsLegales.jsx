@@ -40,9 +40,15 @@ export default function MentionsLegales() {
             Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification et de suppression de vos données personnelles. Pour exercer ces droits, contactez-nous à l'adresse : {COMPANY.email}.
           </p>
 
+          <h2 className="font-heading text-xl font-bold mt-8 mb-3">Responsabilité</h2>
+          <p className="text-muted-foreground leading-relaxed">
+            Les informations disponibles sur ce site sont fournies à titre indicatif. {COMPANY.name} s'efforce de maintenir l'exactitude des contenus mais ne saurait être tenu responsable d'erreurs, omissions ou résultats obtenus suite à une mauvaise utilisation des informations publiées. L'utilisateur est seul responsable de l'utilisation qu'il fait des informations diffusées.
+          </p>
+
           <h2 className="font-heading text-xl font-bold mt-8 mb-3">Cookies</h2>
           <p className="text-muted-foreground leading-relaxed">
-            Ce site utilise des cookies nécessaires au bon fonctionnement du site. Aucun cookie de tracking publicitaire n'est utilisé.
+            Ce site utilise des cookies nécessaires à son bon fonctionnement ainsi que des cookies analytiques activés uniquement après votre consentement. Consultez notre{" "}
+            <a href="/cookies" className="text-primary hover:underline">Politique Cookies</a> pour plus d'informations.
           </p>
         </div>
       </section>
