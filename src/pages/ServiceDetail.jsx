@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { SERVICES, COMPANY } from "@/lib/siteData";
+import { SERVICE_IMAGES } from "@/lib/images";
 import { Link } from "react-router-dom";
 import Breadcrumbs from "@/components/shared/Breadcrumbs";
 import CTABand from "@/components/shared/CTABand";
 import FAQSection from "@/components/shared/FAQSection";
 import ContactForm from "@/components/shared/ContactForm";
-import { Phone, Check, ArrowRight, Shield, Clock, Award } from "lucide-react";
+import { Phone, Check, ArrowRight, Shield, Clock, Award, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const SERVICE_CONTENT = {
@@ -90,14 +91,18 @@ const SERVICE_CONTENT = {
 };
 
 export default function ServiceDetail() {
-  const urlParams = new URLSearchParams(window.location.search);
   const slug = window.location.pathname.split("/services/")[1];
   const service = SERVICES.find(s => s.slug === slug);
   const content = SERVICE_CONTENT[slug];
+  const images = SERVICE_IMAGES[slug] || [];
+  const [lightbox, setLightbox] = useState(null); // index of open image
 
   if (!service || !content) {
     return <div className="p-20 text-center text-muted-foreground">Service non trouvé</div>;
   }
+
+  const prevImage = () => setLightbox(i => (i - 1 + images.length) % images.length);
+  const nextImage = () => setLightbox(i => (i + 1) % images.length);
 
   return (
     <>
@@ -160,6 +165,35 @@ export default function ServiceDetail() {
                   </div>
                 ))}
               </div>
+
+              {/* Photo gallery */}
+              {images.length > 0 && (
+                <div className="mt-12">
+                  <h3 className="font-heading text-xl font-bold mb-5">Photos de nos réalisations — {service.shortTitle}</h3>
+                  <div className="grid grid-cols-2 gap-3">
+                    {images.map((img, i) => (
+                      <button
+                        key={i}
+                        onClick={() => setLightbox(i)}
+                        className="group relative rounded-xl overflow-hidden aspect-[4/3] bg-muted focus:outline-none focus:ring-2 focus:ring-primary"
+                      >
+                        <img
+                          src={img.url}
+                          alt={img.alt}
+                          title={img.alt}
+                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-end">
+                          <span className="w-full text-white text-xs font-medium px-3 py-2 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            {img.caption}
+                          </span>
+                        </div>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Sidebar form */}
@@ -189,6 +223,33 @@ export default function ServiceDetail() {
 
       {content.faqs && <FAQSection faqs={content.faqs} title={`FAQ — ${service.shortTitle}`} />}
       <CTABand title={`Besoin d'un ${service.shortTitle.toLowerCase()} en Haute-Savoie ?`} />
+
+      {/* Lightbox */}
+      {lightbox !== null && (
+        <div
+          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
+          onClick={() => setLightbox(null)}
+        >
+          <button onClick={() => setLightbox(null)} className="absolute top-4 right-4 text-white hover:text-primary">
+            <X className="w-8 h-8" />
+          </button>
+          <button onClick={(e) => { e.stopPropagation(); prevImage(); }} className="absolute left-4 text-white hover:text-primary">
+            <ChevronLeft className="w-10 h-10" />
+          </button>
+          <div onClick={e => e.stopPropagation()} className="max-w-4xl w-full">
+            <img
+              src={images[lightbox].url}
+              alt={images[lightbox].alt}
+              title={images[lightbox].alt}
+              className="w-full max-h-[80vh] object-contain rounded-xl"
+            />
+            <p className="text-center text-white/80 mt-3 text-sm">{images[lightbox].caption}</p>
+          </div>
+          <button onClick={(e) => { e.stopPropagation(); nextImage(); }} className="absolute right-4 text-white hover:text-primary">
+            <ChevronRight className="w-10 h-10" />
+          </button>
+        </div>
+      )}
     </>
   );
 }
