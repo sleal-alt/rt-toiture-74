@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { SERVICES, COMPANY } from "@/lib/siteData";
 import { SERVICE_IMAGES } from "@/lib/images";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Breadcrumbs from "@/components/shared/Breadcrumbs";
 import CTABand from "@/components/shared/CTABand";
 import FAQSection from "@/components/shared/FAQSection";
@@ -91,7 +91,7 @@ const SERVICE_CONTENT = {
 };
 
 export default function ServiceDetail() {
-  const slug = window.location.pathname.split("/services/")[1];
+  const { slug } = useParams();
   const service = SERVICES.find(s => s.slug === slug);
   const content = SERVICE_CONTENT[slug];
   const images = SERVICE_IMAGES[slug] || [];
