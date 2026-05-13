@@ -38,32 +38,27 @@ export default function CookieBanner() {
     <AnimatePresence>
       {visible && (
         <motion.div
-          initial={{ y: 100, opacity: 0 }}
+          initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          exit={{ y: 100, opacity: 0 }}
-          transition={{ type: "spring", damping: 22, stiffness: 260 }}
-          className="fixed bottom-0 left-0 right-0 z-[200] lg:bottom-6 lg:left-6 lg:right-auto lg:max-w-md"
+          exit={{ y: 20, opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          className="fixed bottom-4 left-4 right-4 z-[200] sm:bottom-5 sm:left-5 sm:right-auto sm:max-w-sm"
         >
           <div className="bg-card border border-border shadow-2xl rounded-t-2xl lg:rounded-2xl overflow-hidden">
             {/* Header */}
-            <div className="bg-accent px-5 py-4 flex items-center justify-between gap-3">
-              <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center shrink-0">
-                  <Cookie className="w-4 h-4 text-white" />
-                </div>
-                <div>
-                  <p className="font-heading font-bold text-sm text-accent-foreground">Gestion des cookies</p>
-                  <p className="text-xs text-muted-foreground">RT Toiture 74 — RGPD</p>
-                </div>
+            <div className="px-4 pt-4 pb-1 flex items-center justify-between gap-3">
+              <div className="flex items-center gap-2">
+                <Cookie className="w-4 h-4 text-primary shrink-0" />
+                <p className="text-sm font-semibold text-foreground">Cookies</p>
               </div>
-              <button onClick={refuseAll} className="text-muted-foreground hover:text-foreground transition p-1 rounded-lg hover:bg-muted/50">
-                <X className="w-4 h-4" />
+              <button onClick={refuseAll} className="text-muted-foreground hover:text-foreground transition p-1 rounded">
+                <X className="w-3.5 h-3.5" />
               </button>
             </div>
 
             {/* Body */}
-            <div className="px-5 py-4">
-              <p className="text-sm text-muted-foreground leading-relaxed">
+            <div className="px-4 pb-3">
+              <p className="text-xs text-muted-foreground leading-relaxed">
                 Nous utilisons des cookies pour améliorer votre expérience et analyser notre trafic.{" "}
                 <Link to="/cookies" className="text-primary hover:underline font-medium">En savoir plus</Link>
               </p>
@@ -126,7 +121,7 @@ export default function CookieBanner() {
             </div>
 
             {/* Actions */}
-            <div className="px-5 pb-5 space-y-2">
+            <div className="px-4 pb-4 space-y-2">
               <div className="flex gap-2">
                 <Button
                   size="sm"
@@ -157,7 +152,7 @@ export default function CookieBanner() {
             </div>
 
             {/* RGPD mention */}
-            <div className="px-5 pb-3 flex items-center gap-1.5">
+            <div className="px-4 pb-3 flex items-center gap-1.5">
               <Shield className="w-3 h-3 text-muted-foreground/60 shrink-0" />
               <p className="text-[10px] text-muted-foreground/60">Conforme RGPD — Aucune donnée vendue à des tiers</p>
             </div>
