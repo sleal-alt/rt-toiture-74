@@ -44,25 +44,28 @@ const AuthenticatedApp = () => {
   }
 
   return (
-    <Routes>
-      <Route element={<Layout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/services/:slug" element={<ServiceDetail />} />
-        <Route path="/realisations" element={<Realisations />} />
-        <Route path="/avis" element={<Avis />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/devis" element={<Devis />} />
-        <Route path="/a-propos" element={<APropos />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/couvreur/:slug" element={<CommunePage />} />
-        <Route path="/mentions-legales" element={<MentionsLegales />} />
-        <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
-        <Route path="/cookies" element={<PolitiqueCookies />} />
-        <Route path="/plan-du-site" element={<PlanDuSite />} />
-        <Route path="*" element={<PageNotFound />} />
-      </Route>
-    </Routes>
+    <>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/services/:slug" element={<ServiceDetail />} />
+          <Route path="/realisations" element={<Realisations />} />
+          <Route path="/avis" element={<Avis />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/devis" element={<Devis />} />
+          <Route path="/a-propos" element={<APropos />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/couvreur/:slug" element={<CommunePage />} />
+          <Route path="/mentions-legales" element={<MentionsLegales />} />
+          <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
+          <Route path="/cookies" element={<PolitiqueCookies />} />
+          <Route path="/plan-du-site" element={<PlanDuSite />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Route>
+      </Routes>
+      <CookieBanner />
+    </>
   );
 };
 
@@ -72,7 +75,6 @@ function App() {
       <AuthProvider>
         <QueryClientProvider client={queryClientInstance}>
           <AuthenticatedApp />
-          <CookieBanner />
           <Toaster />
         </QueryClientProvider>
       </AuthProvider>
