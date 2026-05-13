@@ -1,6 +1,6 @@
 import React from "react";
 import { COMMUNES, SERVICES, COMPANY } from "@/lib/siteData";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Breadcrumbs from "@/components/shared/Breadcrumbs";
 import CTABand from "@/components/shared/CTABand";
 import FAQSection from "@/components/shared/FAQSection";
@@ -34,7 +34,7 @@ En choisissant un artisan couvreur local à ${name}, vous bénéficiez d'une ré
 }
 
 export default function CommunePage() {
-  const slug = window.location.pathname.split("/couvreur/")[1];
+  const { slug } = useParams();
   const commune = COMMUNES.find(c => c.slug === slug);
 
   if (!commune) {
