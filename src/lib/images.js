@@ -1,4 +1,5 @@
 export const IMAGES = {
+  logo: "https://media.base44.com/images/public/6a040ea9436ccf8c732b004e/f04a9704d_1234.png",
   hero: "https://media.base44.com/images/public/6a040ea9436ccf8c732b004e/db797a87f_generated_5d6727f5.png",
   beforeAfter: "https://media.base44.com/images/public/6a040ea9436ccf8c732b004e/5dd03b954_generated_4c5fa3fe.png",
   zone: "https://media.base44.com/images/public/6a040ea9436ccf8c732b004e/6273f02a3_generated_6161425c.png",
