@@ -7,6 +7,7 @@ import ArtisanLocal from "@/components/home/ArtisanLocal";
 import BeforeAfterSlider from "@/components/home/BeforeAfterSlider";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import ZonesSection from "@/components/home/ZonesSection";
+import MapSection from "@/components/home/MapSection";
 import RGEBadge from "@/components/home/RGEBadge";
 import CTABand from "@/components/shared/CTABand";
 import FAQSection from "@/components/shared/FAQSection";
@@ -56,6 +57,7 @@ export default function Home() {
       <BeforeAfterSlider />
       <RGEBadge />
       <TestimonialsSection />
+      <MapSection />
       <ZonesSection />
       <FAQSection
         faqs={HOME_FAQS}
