@@ -96,7 +96,7 @@ export default function Footer() {
 
       {/* Bottom */}
       <div className="border-t border-border/20">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-muted-foreground">
+        <div className="max-w-7xl mx-auto px-6 py-4 pb-24 lg:pb-4 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-muted-foreground">
           <p>© 2025 {COMPANY.name} — SIRET {COMPANY.siret}</p>
           <div className="flex flex-wrap gap-4">
             <Link to="/mentions-legales" className="hover:text-primary transition">Mentions légales</Link>
