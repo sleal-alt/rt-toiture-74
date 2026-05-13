@@ -165,3 +165,161 @@ export const BLOG_IDEAS = [
   { title: "Urgence toiture : que faire en cas de tempête ?", slug: "urgence-toiture-tempete" },
   { title: "Les erreurs à éviter lors d'une rénovation de toiture", slug: "erreurs-renovation-toiture" },
 ];
+
+export const BLOG_THEMES = [
+  {
+    id: "entretien-nettoyage",
+    label: "Entretien & Nettoyage",
+    icon: "Droplets",
+    color: "blue",
+    description: "Conseils pour préserver et entretenir votre toiture au fil des saisons.",
+    subthemes: [
+      {
+        label: "Démoussage & Traitement",
+        articles: [
+          { title: "Quand nettoyer sa toiture en montagne ?", slug: "quand-nettoyer-toiture-montagne" },
+          { title: "Les mousses sur le toit sont-elles dangereuses ?", slug: "mousses-toit-dangereuses" },
+          { title: "Démoussage toiture : méthode manuelle vs haute pression", slug: "demoussage-manuelle-vs-haute-pression" },
+          { title: "Traitement anti-mousse professionnel : comment ça marche ?", slug: "traitement-anti-mousse-professionnel" },
+          { title: "Traitement hydrofuge : pourquoi c'est indispensable ?", slug: "traitement-hydrofuge-indispensable" },
+        ]
+      },
+      {
+        label: "Zinguerie & Gouttières",
+        articles: [
+          { title: "Gouttières bouchées : que faire ?", slug: "gouttieres-bouchees-solution" },
+          { title: "Chéneau ou gouttière : quelle différence ?", slug: "cheneau-vs-gouttiere-difference" },
+          { title: "Comment nettoyer des gouttières en zinc ?", slug: "nettoyer-gouttieres-zinc" },
+          { title: "Zinguerie : tout savoir sur les travaux de zinc", slug: "zinguerie-tout-savoir" },
+        ]
+      },
+      {
+        label: "Entretien saisonnier",
+        articles: [
+          { title: "Entretien toiture en montagne : le guide complet", slug: "entretien-toiture-montagne-guide" },
+          { title: "Comment préparer sa toiture pour l'hiver en montagne ?", slug: "preparer-toiture-hiver-montagne" },
+          { title: "Toiture et grêle : comment protéger votre maison ?", slug: "toiture-grele-protection" },
+          { title: "Urgence toiture : que faire en cas de tempête ?", slug: "urgence-toiture-tempete" },
+        ]
+      }
+    ]
+  },
+  {
+    id: "renovation-reparation",
+    label: "Rénovation & Réparation",
+    icon: "Hammer",
+    color: "orange",
+    description: "Tout savoir sur la rénovation et la réparation de votre couverture.",
+    subthemes: [
+      {
+        label: "Détecter & Diagnostiquer",
+        articles: [
+          { title: "Comment détecter une fuite de toiture ?", slug: "detecter-fuite-toiture" },
+          { title: "Les 5 signes qu'il faut rénover votre toiture", slug: "signes-renover-toiture" },
+          { title: "Condensation sous toiture : causes et solutions", slug: "condensation-sous-toiture" },
+          { title: "Infiltration d'eau par le toit : urgence et solutions", slug: "infiltration-eau-toit-urgence" },
+          { title: "Comment repérer un problème d'étanchéité ?", slug: "reperer-probleme-etancheite" },
+        ]
+      },
+      {
+        label: "Réparation & Travaux",
+        articles: [
+          { title: "Réparation faîtage : prix et méthode", slug: "reparation-faitage-prix-methode" },
+          { title: "Peinture toiture : quel produit choisir ?", slug: "peinture-toiture-produit-choisir" },
+          { title: "EPDM vs membrane bitumineuse : comparatif étanchéité", slug: "epdm-vs-membrane-bitumineuse" },
+          { title: "Les erreurs à éviter lors d'une rénovation de toiture", slug: "erreurs-renovation-toiture" },
+          { title: "Réfection toiture copropriété : démarches et coûts", slug: "refection-toiture-copropriete" },
+        ]
+      },
+      {
+        label: "Cas particuliers",
+        articles: [
+          { title: "Amiante dans la toiture : que faire ?", slug: "amiante-toiture-que-faire" },
+          { title: "Toit terrasse accessible : réglementation et étanchéité", slug: "toit-terrasse-accessible-reglementation" },
+          { title: "Toiture et assurance : que couvre votre contrat ?", slug: "toiture-assurance-couverture" },
+        ]
+      }
+    ]
+  },
+  {
+    id: "materiaux-types",
+    label: "Matériaux & Types de Toiture",
+    icon: "Layers",
+    color: "slate",
+    description: "Comparatifs et guides sur les différents matériaux et configurations.",
+    subthemes: [
+      {
+        label: "Matériaux de couverture",
+        articles: [
+          { title: "Quelle toiture résiste le mieux à la neige ?", slug: "toiture-resistante-neige" },
+          { title: "Quelle est la durée de vie d'une toiture en tuiles ?", slug: "duree-vie-toiture-tuiles" },
+          { title: "Couverture en ardoise : prix et avantages", slug: "couverture-ardoise-prix-avantages" },
+          { title: "Les meilleurs matériaux de couverture pour la montagne", slug: "meilleurs-materiaux-couverture-montagne" },
+          { title: "Toiture en lauze : tradition savoyarde", slug: "toiture-lauze-tradition-savoyarde" },
+          { title: "Bardeau bitumé : bonne solution pour la Haute-Savoie ?", slug: "bardeau-bitume-haute-savoie" },
+          { title: "Toiture bac acier : avantages pour la montagne", slug: "toiture-bac-acier-montagne" },
+        ]
+      },
+      {
+        label: "Configurations & Structures",
+        articles: [
+          { title: "Toiture plate ou en pente : avantages et inconvénients", slug: "toiture-plate-vs-pente" },
+          { title: "Charpente traditionnelle vs fermette : comparatif", slug: "charpente-traditionnelle-vs-fermette" },
+          { title: "Ventilation de toiture : pourquoi c'est essentiel ?", slug: "ventilation-toiture-essentiel" },
+          { title: "Choisir la couleur de sa toiture en Haute-Savoie", slug: "couleur-toiture-haute-savoie" },
+          { title: "Toiture végétalisée en montagne : est-ce possible ?", slug: "toiture-vegetalisee-montagne" },
+        ]
+      }
+    ]
+  },
+  {
+    id: "isolation-energie",
+    label: "Isolation & Énergie",
+    icon: "Zap",
+    color: "green",
+    description: "Améliorer les performances énergétiques de votre habitat par la toiture.",
+    subthemes: [
+      {
+        label: "Isolation toiture",
+        articles: [
+          { title: "Isolation toiture : aides disponibles en Haute-Savoie", slug: "aides-isolation-toiture-haute-savoie" },
+          { title: "Isolation par l'extérieur de la toiture (sarking)", slug: "isolation-exterieur-toiture-sarking" },
+          { title: "Rénovation énergétique : par où commencer ?", slug: "renovation-energetique-commencer" },
+          { title: "Réglementation thermique et toiture en 74", slug: "reglementation-thermique-toiture-74" },
+        ]
+      },
+      {
+        label: "Aides & Financement",
+        articles: [
+          { title: "Subventions MaPrimeRénov' pour la toiture", slug: "subventions-maprimenrenov-toiture" },
+          { title: "Panneaux solaires sur toiture en Haute-Savoie", slug: "panneaux-solaires-toiture-haute-savoie" },
+          { title: "Certification RGE : pourquoi c'est important ?", slug: "certification-rge-importance" },
+        ]
+      }
+    ]
+  },
+  {
+    id: "conseils-pratiques",
+    label: "Conseils Pratiques",
+    icon: "Info",
+    color: "purple",
+    description: "Guides pratiques pour faire les bons choix et éviter les erreurs.",
+    subthemes: [
+      {
+        label: "Choisir son artisan",
+        articles: [
+          { title: "Comment choisir son couvreur en Haute-Savoie ?", slug: "choisir-couvreur-haute-savoie" },
+          { title: "Toiture et permis de construire en Haute-Savoie", slug: "toiture-permis-construire-haute-savoie" },
+          { title: "Le ravalement de façade est-il obligatoire en 74 ?", slug: "ravalement-facade-obligatoire-74" },
+        ]
+      },
+      {
+        label: "Guides & Comparatifs",
+        articles: [
+          { title: "Quel prix pour refaire une toiture en Haute-Savoie ?", slug: "prix-refaire-toiture-haute-savoie" },
+          { title: "Combien coûte un démoussage de toiture en 2025 ?", slug: "cout-demoussage-toiture-2025" },
+        ]
+      }
+    ]
+  },
+];
