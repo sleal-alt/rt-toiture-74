@@ -1,60 +1,32 @@
 import React from "react";
 import { SERVICE_IMAGES, IMAGES } from "@/lib/images";
 
-// Pool complet de toutes les photos disponibles
-const ALL_PHOTOS = [
-  { url: SERVICE_IMAGES["demoussage-nettoyage-toiture"][0].url, alt: SERVICE_IMAGES["demoussage-nettoyage-toiture"][0].alt, label: "Nettoyage haute pression" },
-  { url: SERVICE_IMAGES["demoussage-nettoyage-toiture"][1].url, alt: SERVICE_IMAGES["demoussage-nettoyage-toiture"][1].alt, label: "Avant / après démoussage" },
-  { url: SERVICE_IMAGES["demoussage-nettoyage-toiture"][2].url, alt: SERVICE_IMAGES["demoussage-nettoyage-toiture"][2].alt, label: "Matériel professionnel" },
-  { url: SERVICE_IMAGES["demoussage-nettoyage-toiture"][3].url, alt: SERVICE_IMAGES["demoussage-nettoyage-toiture"][3].alt, label: "Toiture propre et protégée" },
-  { url: SERVICE_IMAGES["traitement-hydrofuge-toiture"][0].url, alt: SERVICE_IMAGES["traitement-hydrofuge-toiture"][0].alt, label: "Traitement hydrofuge" },
-  { url: SERVICE_IMAGES["traitement-hydrofuge-toiture"][1].url, alt: SERVICE_IMAGES["traitement-hydrofuge-toiture"][1].alt, label: "Imperméabilisation totale" },
-  { url: SERVICE_IMAGES["traitement-fongicide-toiture"][0].url, alt: SERVICE_IMAGES["traitement-fongicide-toiture"][0].alt, label: "Traitement fongicide" },
-  { url: SERVICE_IMAGES["traitement-fongicide-toiture"][1].url, alt: SERVICE_IMAGES["traitement-fongicide-toiture"][1].alt, label: "Protection anti-mousse" },
-  { url: SERVICE_IMAGES["revetement-hydrofuge-teinte"][0].url, alt: SERVICE_IMAGES["revetement-hydrofuge-teinte"][0].alt, label: "Revêtement teinté" },
-  { url: SERVICE_IMAGES["revetement-hydrofuge-teinte"][1].url, alt: SERVICE_IMAGES["revetement-hydrofuge-teinte"][1].alt, label: "Choix de teintes" },
-  { url: SERVICE_IMAGES["revetement-hydrofuge-teinte"][2].url, alt: SERVICE_IMAGES["revetement-hydrofuge-teinte"][2].alt, label: "Application au rouleau" },
-  { url: SERVICE_IMAGES["revetement-hydrofuge-teinte"][3].url, alt: SERVICE_IMAGES["revetement-hydrofuge-teinte"][3].alt, label: "Résultat final" },
-  { url: SERVICE_IMAGES["peinture-toiture"][0].url, alt: SERVICE_IMAGES["peinture-toiture"][0].alt, label: "Peinture toiture" },
-  { url: SERVICE_IMAGES["peinture-toiture"][1].url, alt: SERVICE_IMAGES["peinture-toiture"][1].alt, label: "Résultat spectaculaire" },
-  { url: SERVICE_IMAGES["couverture-toiture"][0].url, alt: SERVICE_IMAGES["couverture-toiture"][0].alt, label: "Pose de tuiles neuves" },
-  { url: SERVICE_IMAGES["couverture-toiture"][1].url, alt: SERVICE_IMAGES["couverture-toiture"][1].alt, label: "Pose ardoises" },
-  { url: SERVICE_IMAGES["couverture-toiture"][2].url, alt: SERVICE_IMAGES["couverture-toiture"][2].alt, label: "Réfection complète" },
-  { url: SERVICE_IMAGES["etancheite-toit-terrasse-epdm"][0].url, alt: SERVICE_IMAGES["etancheite-toit-terrasse-epdm"][0].alt, label: "Étanchéité EPDM" },
-  { url: SERVICE_IMAGES["etancheite-toit-terrasse-epdm"][1].url, alt: SERVICE_IMAGES["etancheite-toit-terrasse-epdm"][1].alt, label: "Toit terrasse parfait" },
-  { url: SERVICE_IMAGES["zinguerie"][0].url, alt: SERVICE_IMAGES["zinguerie"][0].alt, label: "Pose gouttières zinc" },
-  { url: SERVICE_IMAGES["zinguerie"][1].url, alt: SERVICE_IMAGES["zinguerie"][1].alt, label: "Gouttières zinc et cuivre" },
-  { url: SERVICE_IMAGES["zinguerie"][2].url, alt: SERVICE_IMAGES["zinguerie"][2].alt, label: "Abergement cheminée" },
-  { url: IMAGES.artisan, alt: "Artisan couvreur professionnel certifié RGE Haute-Savoie", label: "Artisan certifié RGE" },
-  { url: IMAGES.beforeAfter, alt: "Avant après rénovation toiture Haute-Savoie résultat professionnel", label: "Avant / après rénovation" },
+// 4 photos fixes représentant les 4 prestations phares — identiques sur toutes les pages communes
+const FIXED_PHOTOS = [
+  {
+    url: SERVICE_IMAGES["couverture-toiture"][0].url,
+    alt: "Remplacement couverture toiture tuiles neuves chalet Haute-Savoie",
+    label: "Remplacement couverture",
+  },
+  {
+    url: SERVICE_IMAGES["demoussage-nettoyage-toiture"][0].url,
+    alt: "Démoussage nettoyage toiture haute pression Haute-Savoie",
+    label: "Démoussage toiture",
+  },
+  {
+    url: IMAGES.hero,
+    alt: "Urgence toiture bâchage intervention rapide 7j/7 Haute-Savoie",
+    label: "Urgence toiture — bâchage",
+  },
+  {
+    url: SERVICE_IMAGES["etancheite-toit-terrasse-epdm"][0].url,
+    alt: "Étanchéité toit terrasse EPDM Retridex professionnel Haute-Savoie",
+    label: "Étanchéité toit terrasse",
+  },
 ];
 
-// Hash déterministe du slug → entier
-function hashSlug(slug) {
-  if (!slug) return 0;
-  let h = 0;
-  for (let i = 0; i < slug.length; i++) {
-    h = (Math.imul(31, h) + slug.charCodeAt(i)) | 0;
-  }
-  return Math.abs(h);
-}
-
-// Mélange déterministe du tableau (Fisher-Yates avec seed)
-function seededShuffle(arr, seed) {
-  const a = [...arr];
-  let s = seed;
-  for (let i = a.length - 1; i > 0; i--) {
-    s = (Math.imul(1664525, s) + 1013904223) | 0;
-    const j = Math.abs(s) % (i + 1);
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
-
 export default function CommunePhotoGallery({ commune, slug }) {
-  const seed = hashSlug(slug);
-  // Mélange tout le pool de façon unique par commune, prend les 4 premiers
-  const photos = seededShuffle(ALL_PHOTOS, seed).slice(0, 4);
+  const photos = FIXED_PHOTOS;
 
   return (
     <section className="py-12 bg-muted/30">
