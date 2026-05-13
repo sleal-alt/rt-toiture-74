@@ -16,9 +16,12 @@ const SERVICE_CONTENT = {
     benefits: ["Élimination complète des mousses et lichens", "Nettoyage haute pression adapté au support", "Vérification de l'état général de la toiture", "Traitement préventif inclus", "Prolongation de la durée de vie de 15 à 20 ans"],
     details: "Notre équipe utilise des techniques professionnelles adaptées à chaque type de couverture. En Haute-Savoie, nous intervenons sur les toitures en tuiles, ardoises, fibrociment et tous types de supports. Le nettoyage est réalisé avec un matériel professionnel qui respecte vos matériaux tout en éliminant efficacement toutes les salissures biologiques. Après le nettoyage, nous procédons à une inspection complète de votre toiture pour identifier d'éventuels problèmes : tuiles cassées, joints défaillants, problèmes de zinguerie. C'est l'occasion idéale de prévenir les fuites avant qu'elles ne causent des dégâts importants.",
     faqs: [
-      { question: "À quelle fréquence faut-il nettoyer sa toiture en Haute-Savoie ?", answer: "En montagne, nous recommandons un nettoyage tous les 3 à 5 ans en raison de l'humidité et des conditions climatiques qui accélèrent la prolifération des mousses." },
-      { question: "Le nettoyage haute pression abîme-t-il les tuiles ?", answer: "Non, nous adaptons la pression à chaque type de support. Nos professionnels utilisent des techniques qui nettoient efficacement sans endommager vos matériaux de couverture." },
+      { question: "À quelle fréquence faut-il nettoyer sa toiture en Haute-Savoie ?", answer: "En montagne, nous recommandons un nettoyage tous les 3 à 5 ans en raison de l'humidité et des conditions climatiques qui accélèrent la prolifération des mousses et lichens." },
+      { question: "Le nettoyage haute pression abîme-t-il les tuiles ?", answer: "Non, nous adaptons la pression à chaque type de support. Nos professionnels utilisent des techniques qui nettoient efficacement sans endommager vos matériaux. Pour les ardoises fragiles, nous utilisons un lavage basse pression." },
       { question: "Combien de temps dure un nettoyage de toiture ?", answer: "En moyenne, le nettoyage d'une toiture standard de 100m² prend 1 à 2 jours, incluant le nettoyage, l'inspection et le traitement préventif." },
+      { question: "Quel est le prix d'un démoussage de toiture ?", answer: "Le prix varie entre 15€ et 35€ par m² selon la surface, l'accessibilité et l'état d'encrassement. Nous proposons un devis gratuit et sans engagement sous 24h." },
+      { question: "Peut-on faire un démoussage par tous les temps ?", answer: "Non, nous intervenons par temps sec et hors période de gel. En Haute-Savoie, la meilleure période est le printemps ou l'automne lorsque les conditions météo sont favorables." },
+      { question: "Faut-il traiter la toiture après le nettoyage ?", answer: "Oui, un traitement fongicide après le nettoyage est fortement recommandé. Il empêche la réapparition des mousses et multiplie par 2 à 3 la durée entre chaque intervention." },
     ],
   },
   "traitement-fongicide-toiture": {
@@ -27,8 +30,11 @@ const SERVICE_CONTENT = {
     benefits: ["Destruction totale des micro-organismes", "Protection longue durée anti-mousse", "Produits professionnels certifiés", "Application par pulvérisation homogène", "Compatible tous supports de couverture"],
     details: "Le traitement fongicide est l'étape clé après le nettoyage de votre toiture. Il empêche la réapparition des mousses et champignons pendant plusieurs années. Nos produits professionnels pénètrent en profondeur dans les matériaux pour une protection durable. En Haute-Savoie, où les toitures sont soumises à des conditions extrêmes — neige, gel, pluie, humidité — le traitement fongicide constitue un investissement judicieux pour éviter les dégradations prématurées de votre couverture.",
     faqs: [
-      { question: "Le traitement fongicide est-il dangereux pour l'environnement ?", answer: "Nos produits sont certifiés et respectent les normes environnementales en vigueur. Ils sont biodégradables et sans danger pour votre jardin et vos plantations." },
-      { question: "Combien de temps dure l'effet du traitement fongicide ?", answer: "Le traitement fongicide professionnel protège votre toiture pendant 3 à 5 ans selon l'exposition et les conditions climatiques." },
+      { question: "Le traitement fongicide est-il dangereux pour l'environnement ?", answer: "Nos produits sont certifiés et respectent les normes environnementales en vigueur. Ils sont biodégradables et sans danger pour votre jardin et vos plantations environnantes." },
+      { question: "Combien de temps dure l'effet du traitement fongicide ?", answer: "Le traitement fongicide professionnel protège votre toiture pendant 3 à 5 ans selon l'exposition solaire, l'altitude et les conditions climatiques locales." },
+      { question: "Doit-on nettoyer la toiture avant un traitement fongicide ?", answer: "Oui, un nettoyage préalable est indispensable. Le fongicide pénètre mieux dans des matériaux propres et son efficacité est nettement supérieure sur une surface débarrassée des mousses et lichens." },
+      { question: "Quand est-ce que le traitement fongicide prend effet ?", answer: "L'action est visible en quelques semaines. Les mousses sèchent et se désagrègent progressivement, ce qui est tout à fait normal. La protection complète est atteinte après la première pluie." },
+      { question: "Le traitement fongicide convient-il à tous types de toiture ?", answer: "Oui, nos produits sont compatibles avec les tuiles béton, les tuiles terre cuite, les ardoises, le fibrociment et la plupart des matériaux de couverture rencontrés en Haute-Savoie." },
     ],
   },
   "traitement-hydrofuge-toiture": {
@@ -38,7 +44,11 @@ const SERVICE_CONTENT = {
     details: "L'hydrofuge crée une barrière invisible qui empêche l'eau de pénétrer dans les matériaux de couverture tout en laissant la toiture respirer. C'est particulièrement important en Haute-Savoie où les cycles gel/dégel fragilisent les tuiles non protégées. Notre traitement hydrofuge professionnel, garanti 10 ans, utilise des produits de dernière génération à base de silicone ou siloxane qui offrent une protection maximale.",
     faqs: [
       { question: "Pourquoi le traitement hydrofuge est-il garanti 10 ans ?", answer: "Nous utilisons des produits professionnels de haute qualité qui ont fait leurs preuves. La garantie 10 ans couvre la performance hydrofuge du traitement dans des conditions normales d'utilisation." },
-      { question: "Le traitement hydrofuge change-t-il l'aspect de ma toiture ?", answer: "Non, le traitement hydrofuge est transparent et invisible. Il préserve l'aspect naturel de vos tuiles tout en offrant un effet perlant qui fait glisser l'eau." },
+      { question: "Le traitement hydrofuge change-t-il l'aspect de ma toiture ?", answer: "Non, le traitement hydrofuge est transparent et invisible. Il préserve l'aspect naturel de vos tuiles tout en offrant un effet perlant qui fait glisser l'eau et la neige." },
+      { question: "Faut-il nettoyer la toiture avant l'application de l'hydrofuge ?", answer: "Absolument. L'hydrofuge doit être appliqué sur un support propre et sec. Un nettoyage et un traitement fongicide préalables sont indispensables pour une adhérence et une efficacité optimales." },
+      { question: "L'hydrofuge protège-t-il contre le gel en montagne ?", answer: "Oui, c'est l'un de ses atouts majeurs en Haute-Savoie. En empêchant l'eau de s'infiltrer dans les tuiles, il évite les cycles de gel/dégel qui fissurent et éclatent les matériaux de couverture." },
+      { question: "Quel est le prix d'un traitement hydrofuge en Haute-Savoie ?", answer: "Le tarif se situe entre 20€ et 45€ par m² selon la surface et l'accessibilité. Compte tenu de la garantie 10 ans, c'est un investissement très rentable comparé au coût d'une réfection." },
+      { question: "Le traitement hydrofuge peut-il être appliqué par n'importe quel temps ?", answer: "Non, l'application nécessite une température entre 5°C et 30°C, un support sec et aucune pluie prévue dans les 24 à 48 heures suivant l'intervention. Nous planifions nos chantiers en conséquence." },
     ],
   },
   "revetement-hydrofuge-teinte": {
@@ -47,7 +57,11 @@ const SERVICE_CONTENT = {
     benefits: ["Double action : protection + coloration", "Large choix de teintes", "Résultat immédiat visible", "Protection hydrofuge longue durée", "Rénovation esthétique sans remplacement"],
     details: "Le revêtement hydrofuge teinté est la solution idéale pour les toitures décolorées par le temps et les intempéries. Il permet de redonner un aspect neuf à votre couverture tout en assurant une protection hydrofuge efficace. Disponible dans un large éventail de couleurs, il s'adapte à tous les styles architecturaux de Haute-Savoie.",
     faqs: [
-      { question: "Quelles couleurs sont disponibles pour l'hydrofuge teinté ?", answer: "Nous proposons une large gamme de teintes : rouge tuile, brun, ardoise, terre cuite, noir, et bien d'autres. Nous vous conseillons la teinte la plus adaptée à votre toiture et à votre environnement." },
+      { question: "Quelles couleurs sont disponibles pour l'hydrofuge teinté ?", answer: "Nous proposons une large gamme de teintes : rouge tuile, brun, ardoise, terre cuite, noir, gris anthracite, et bien d'autres. Nous vous conseillons la teinte la plus adaptée à votre toiture et à votre environnement alpin." },
+      { question: "Quelle est la différence entre l'hydrofuge teinté et la peinture de toiture ?", answer: "L'hydrofuge teinté est plus fluide, il pénètre dans les matériaux tout en les colorant légèrement. La peinture de toiture est plus couvrante et opaque. L'hydrofuge teinté est idéal pour raviver une couleur fanée, la peinture pour changer radicalement de teinte." },
+      { question: "Combien de couches faut-il appliquer ?", answer: "En général, deux couches sont nécessaires pour un résultat optimal : une couche d'accrochage et une couche de finition. Nous adaptons selon l'état de votre toiture et le résultat souhaité." },
+      { question: "L'hydrofuge teinté convient-il aux ardoises ?", answer: "Oui, il existe des formulations spécifiques pour les ardoises et les toitures en zinc. Nous sélectionnons toujours le produit adapté à votre matériau de couverture pour garantir le meilleur résultat." },
+      { question: "Combien de temps dure le revêtement hydrofuge teinté ?", answer: "La protection et la tenue de la teinte durent généralement 5 à 8 ans selon l'exposition aux UV et les conditions climatiques. En altitude, le renouvellement peut être plus fréquent en raison du rayonnement solaire plus intense." },
     ],
   },
   "peinture-toiture": {
@@ -56,7 +70,11 @@ const SERVICE_CONTENT = {
     benefits: ["Transformation radicale de l'aspect", "Protection contre les UV et intempéries", "Peintures professionnelles haute tenue", "Amélioration de l'étanchéité", "Valorisation de votre patrimoine"],
     details: "La peinture de toiture est une solution de rénovation esthétique complète. Elle permet de changer ou raviver la couleur de votre couverture tout en ajoutant une couche de protection supplémentaire. Nos peintures professionnelles sont spécialement formulées pour résister aux conditions climatiques exigeantes de la Haute-Savoie.",
     faqs: [
-      { question: "Combien de temps dure une peinture de toiture ?", answer: "Une peinture de toiture professionnelle bien appliquée dure entre 8 et 12 ans. La durée dépend de l'exposition, de l'orientation et des conditions climatiques." },
+      { question: "Combien de temps dure une peinture de toiture ?", answer: "Une peinture de toiture professionnelle bien appliquée dure entre 8 et 12 ans. La durée dépend de l'exposition, de l'orientation et des conditions climatiques en Haute-Savoie." },
+      { question: "Faut-il préparer la toiture avant de la peindre ?", answer: "Oui, la préparation est essentielle. La toiture doit être nettoyée, démoussée et parfois traitée avec un primaire d'accrochage. Sans préparation sérieuse, la peinture risque de s'écailler rapidement." },
+      { question: "Peut-on peindre sa toiture soi-même ?", answer: "Ce n'est pas conseillé. Travailler en hauteur est dangereux sans équipement adapté, et une mauvaise application peut causer des décollements ou des défauts d'aspect. Faire appel à un professionnel garantit un résultat durable et sécurisé." },
+      { question: "La peinture de toiture améliore-t-elle l'isolation ?", answer: "Certaines peintures dites 'réflectives' ou 'thermiques' permettent de réduire la chaleur emmagasinée par la toiture en été. Elles constituent un complément intéressant à l'isolation mais ne la remplacent pas." },
+      { question: "Quel est le prix d'une peinture de toiture en Haute-Savoie ?", answer: "Comptez entre 25€ et 50€ par m² selon la surface, la peinture choisie et l'état de la toiture. Nous établissons un devis gratuit et détaillé après visite de votre toiture." },
     ],
   },
   "couverture-toiture": {
@@ -65,8 +83,12 @@ const SERVICE_CONTENT = {
     benefits: ["Pose neuve et réfection complète", "Tous types de couverture : tuiles, ardoises, zinc", "Réparation de fuites et infiltrations", "Certification RGE", "Respect des normes DTU"],
     details: "En tant qu'artisan couvreur en Haute-Savoie, nous maîtrisons tous les aspects de la couverture de toiture. De la réparation ponctuelle à la réfection complète, nous intervenons sur tous les types de bâtiments : maisons individuelles, chalets, immeubles, bâtiments commerciaux. Notre connaissance approfondie des spécificités climatiques de la montagne nous permet de vous proposer les solutions les plus adaptées.",
     faqs: [
-      { question: "Quel type de couverture est le plus adapté en montagne ?", answer: "En Haute-Savoie, les tuiles béton et les ardoises sont les plus résistantes au climat alpin. Le choix dépend de votre localisation, de l'altitude et du plan local d'urbanisme." },
-      { question: "Combien coûte une réfection complète de toiture ?", answer: "Le prix varie entre 100€ et 250€ par m² selon le type de couverture, l'accessibilité et les travaux annexes nécessaires. Nous réalisons un devis gratuit et personnalisé." },
+      { question: "Quel type de couverture est le plus adapté en montagne ?", answer: "En Haute-Savoie, les tuiles béton et les ardoises sont les plus résistantes au climat alpin. Le choix dépend de votre localisation, de l'altitude et du plan local d'urbanisme (PLU)." },
+      { question: "Combien coûte une réfection complète de toiture ?", answer: "Le prix varie entre 100€ et 250€ par m² selon le type de couverture, l'accessibilité et les travaux annexes nécessaires (charpente, isolation, zinguerie). Nous réalisons un devis gratuit et personnalisé." },
+      { question: "Comment savoir si ma toiture a besoin d'une réfection complète ?", answer: "Plusieurs signes indiquent une toiture en fin de vie : tuiles cassées ou glissées en grand nombre, infiltrations récurrentes, toiture de plus de 30 ans, affaissement visible. Un diagnostic gratuit par notre couvreur permet de trancher entre réparation ponctuelle et réfection totale." },
+      { question: "Quelle est la durée de vie d'une toiture neuve en Haute-Savoie ?", answer: "Avec des matériaux de qualité et un entretien régulier, une toiture neuve dure 30 à 50 ans pour les tuiles béton, 50 à 100 ans pour les ardoises naturelles. L'altitude et l'orientation jouent un rôle important sur cette longévité." },
+      { question: "Les travaux de couverture sont-ils éligibles aux aides de l'État ?", answer: "Certains travaux combinant couverture et isolation peuvent bénéficier de MaPrimeRénov' ou de l'éco-PTZ. En tant qu'artisan RGE, nous vous accompagnons pour monter votre dossier de financement." },
+      { question: "Intervenez-vous en urgence pour une toiture qui fuit ?", answer: "Oui, nous proposons un service d'intervention d'urgence 7j/7 pour les fuites actives. Nous sécurisons d'abord la toiture avec une bâche ou une réparation provisoire, puis réalisons les travaux définitifs dans les meilleurs délais." },
     ],
   },
   "etancheite-toit-terrasse-epdm": {
@@ -77,6 +99,10 @@ const SERVICE_CONTENT = {
     faqs: [
       { question: "Pourquoi choisir l'EPDM plutôt que le bitume ?", answer: "L'EPDM offre une durabilité 2 à 3 fois supérieure au bitume, résiste mieux aux UV et aux variations de température, et sa pose sans flamme est plus sûre. C'est un investissement plus rentable à long terme." },
       { question: "L'EPDM résiste-t-il au poids de la neige ?", answer: "Oui, la membrane EPDM est extrêmement résistante et élastique. Elle supporte sans problème le poids de la neige et les contraintes mécaniques liées aux conditions hivernales en Haute-Savoie." },
+      { question: "Quel est le prix d'une étanchéité EPDM en Haute-Savoie ?", answer: "Le coût varie entre 80€ et 150€ par m² selon la surface, la complexité du toit terrasse et les finitions (relevés, évacuations). Nous proposons un devis gratuit après visite technique." },
+      { question: "Peut-on poser un revêtement sur une membrane EPDM ?", answer: "Oui, l'EPDM est compatible avec de nombreux revêtements : dalles sur plots, graviers, pelouse artificielle ou même terrasse en bois. Nous vous conseillons sur la solution la mieux adaptée à votre usage." },
+      { question: "Combien de temps dure la pose d'une étanchéité EPDM ?", answer: "Pour une terrasse de 50 à 100 m², l'intervention dure généralement 1 à 2 jours selon la complexité. La membrane est posée à froid, sans flamme, ce qui permet une installation rapide et sécurisée." },
+      { question: "Faut-il un permis de construire pour une étanchéité de toit terrasse ?", answer: "Non, les travaux d'étanchéité sur un toit terrasse existant ne nécessitent pas de permis de construire. En revanche, si vous souhaitez surélever ou modifier la structure, une déclaration préalable peut être nécessaire." },
     ],
   },
   "zinguerie": {
@@ -85,7 +111,11 @@ const SERVICE_CONTENT = {
     benefits: ["Pose et remplacement de gouttières", "Chéneaux et descentes EP", "Habillage de sous-toiture et rives", "Abergement de cheminée", "Zinc, cuivre et aluminium laqué"],
     details: "La zinguerie est un élément essentiel de la toiture qui assure l'évacuation des eaux de pluie et la protection des points sensibles de votre couverture. En Haute-Savoie, une zinguerie bien réalisée est cruciale pour résister aux fortes précipitations, à la neige et au gel. Nous travaillons avec les meilleurs matériaux — zinc, cuivre, aluminium laqué — pour garantir durabilité et esthétique.",
     faqs: [
-      { question: "Quel matériau choisir pour les gouttières en montagne ?", answer: "En Haute-Savoie, le zinc et l'aluminium laqué sont les plus adaptés. Le zinc offre une durabilité de 30 à 50 ans et le cuivre est le choix premium avec une longévité exceptionnelle." },
+      { question: "Quel matériau choisir pour les gouttières en montagne ?", answer: "En Haute-Savoie, le zinc et l'aluminium laqué sont les plus adaptés. Le zinc offre une durabilité de 30 à 50 ans et le cuivre est le choix premium avec une longévité exceptionnelle dépassant 100 ans." },
+      { question: "À quelle fréquence faut-il nettoyer ses gouttières ?", answer: "En Haute-Savoie, avec la présence de nombreux arbres à feuilles caduques, nous recommandons un nettoyage des gouttières au moins une fois par an, idéalement à l'automne après la chute des feuilles." },
+      { question: "Quels sont les signes que ma zinguerie doit être remplacée ?", answer: "Les indices à surveiller : gouttières qui débordent ou ne se vident plus, taches de rouille visibles, joints décollés, eau qui s'infiltre au niveau des jonctions de toiture. Un diagnostic gratuit permet d'évaluer l'état de votre zinguerie." },
+      { question: "Qu'est-ce qu'un abergement de cheminée et pourquoi est-il important ?", answer: "L'abergement est le raccord en zinc entre la cheminée et la toiture. Mal exécuté ou dégradé, il est l'une des premières causes d'infiltration d'eau. Un abergement de qualité, bien soudé, assure l'étanchéité totale de ce point sensible pendant des décennies." },
+      { question: "Quel est le prix de remplacement de gouttières en Haute-Savoie ?", answer: "Comptez entre 30€ et 80€ par mètre linéaire selon le matériau (aluminium, zinc, cuivre) et la complexité de pose. Nous établissons un devis détaillé après visite pour évaluer l'ensemble de votre zinguerie." },
     ],
   },
 };
