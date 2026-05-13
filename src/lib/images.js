@@ -150,14 +150,14 @@ export const SERVICE_IMAGES = {
       caption: "Résultat : étanchéité parfaite",
     },
     {
-      url: "https://media.base44.com/images/public/6a040ea9436ccf8c732b004e/9026b3807_generated_image.png",
-      alt: "Détail membrane EPDM imperméable eau pluie toit terrasse — protection 50 ans",
-      caption: "Durabilité supérieure à 50 ans",
+      url: "https://media.base44.com/images/public/6a040ea9436ccf8c732b004e/d300bbc35_generated_image.png",
+      alt: "Détail pose membrane EPDM toit terrasse plat Haute-Savoie — collage professionnel bords parfaits",
+      caption: "Pose soignée — membrane EPDM collée",
     },
     {
-      url: "https://media.base44.com/images/public/6a040ea9436ccf8c732b004e/7b4c15abb_generated_image.png",
-      alt: "Couvreur professionnel étanchéité toit terrasse EPDM pose sans flamme Haute-Savoie",
-      caption: "Pose sans flamme — sécurité maximale",
+      url: "https://media.base44.com/images/public/6a040ea9436ccf8c732b004e/349781a05_generated_image.png",
+      alt: "Résultat final étanchéité EPDM toit terrasse immeuble alpin Haute-Savoie — finition impeccable",
+      caption: "Résultat final — étanchéité parfaite",
     },
   ],
   "zinguerie": [
