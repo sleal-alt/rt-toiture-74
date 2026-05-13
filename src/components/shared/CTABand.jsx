@@ -20,13 +20,17 @@ export default function CTABand({ title, subtitle }) {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
           <a href={COMPANY.phoneTel}>
-            <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-bold gap-2 text-base px-8">
-              <Phone className="w-5 h-5" /> {COMPANY.phone}
+            <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-bold gap-3 text-lg px-8 h-14 shadow-lg">
+              <Phone className="w-5 h-5 shrink-0" />
+              <span className="flex flex-col items-start leading-tight">
+                <span className="text-[10px] font-normal opacity-60 uppercase tracking-wider">Appel gratuit</span>
+                <span>{COMPANY.phone}</span>
+              </span>
             </Button>
           </a>
           <Link to="/devis">
-            <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 font-bold gap-2 text-base px-8">
-              Demander un Devis <ArrowRight className="w-5 h-5" />
+            <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 font-bold gap-2 text-base px-8 h-14">
+              Devis Gratuit Sous 24h <ArrowRight className="w-5 h-5" />
             </Button>
           </Link>
         </div>

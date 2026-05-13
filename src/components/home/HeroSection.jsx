@@ -53,14 +53,18 @@ export default function HeroSection({ heroImage }) {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4 mt-8"
           >
-            <a href={COMPANY.phoneTel}>
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold gap-2 text-base px-8 h-14 w-full sm:w-auto">
-                <Phone className="w-5 h-5" /> Appeler Maintenant
+            <a href={COMPANY.phoneTel} className="w-full sm:w-auto">
+              <Button size="lg" className="relative bg-primary hover:bg-primary/90 text-primary-foreground font-bold gap-3 text-lg px-8 h-16 w-full sm:w-auto shadow-lg shadow-primary/40 animate-pulse hover:animate-none">
+                <Phone className="w-6 h-6" />
+                <span className="flex flex-col items-start leading-tight">
+                  <span className="text-xs font-normal opacity-80">Appel gratuit</span>
+                  <span>{COMPANY.phone}</span>
+                </span>
               </Button>
             </a>
-            <Link to="/devis">
-              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 font-bold gap-2 text-base px-8 h-14 w-full sm:w-auto">
-                Devis Gratuit <ArrowRight className="w-5 h-5" />
+            <Link to="/devis" className="w-full sm:w-auto">
+              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/20 font-bold gap-2 text-base px-8 h-16 w-full sm:w-auto">
+                Devis Gratuit 24h <ArrowRight className="w-5 h-5" />
               </Button>
             </Link>
           </motion.div>
