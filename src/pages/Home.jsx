@@ -6,6 +6,7 @@ import WhyChooseUs from "@/components/home/WhyChooseUs";
 import ArtisanLocal from "@/components/home/ArtisanLocal";
 import BeforeAfterSlider from "@/components/home/BeforeAfterSlider";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
+import GoogleReviews from "@/components/home/GoogleReviews";
 import ZonesSection from "@/components/home/ZonesSection";
 import MapSection from "@/components/home/MapSection";
 import RGEBadge from "@/components/home/RGEBadge";
@@ -57,6 +58,7 @@ export default function Home() {
       <BeforeAfterSlider />
       <RGEBadge />
       <TestimonialsSection />
+      <GoogleReviews />
       <MapSection />
       <ZonesSection />
       <FAQSection

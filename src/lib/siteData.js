@@ -9,7 +9,11 @@ export const COMPANY = {
   zone: "Haute-Savoie (74)",
   domain: "haute-savoie-toiture-74.fr",
   whatsapp: "https://wa.me/33669434142",
-  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2788.5!2d6.06!3d45.87!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDUyJzEyLjAiTiA2wrAwMyczNi4wIkU!5e0!3m2!1sfr!2sfr!4v1",
+  mapEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2788.5!2d6.0594!3d45.8715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478b8f0b0a3c0001%3A0x0!2zNDXCsDUyJzE3LjQiTiA2wrAwMyczMy44IkU!5e0!3m2!1sfr!2sfr!4v1715000000000!5m2!1sfr!2sfr",
+  googleBusiness: "https://share.google/9bjVg8JW1pUi7lBct",
+  googleReview: "https://share.google/9bjVg8JW1pUi7lBct",
+  googleRating: 4.9,
+  googleReviewCount: 47,
   guarantee: "10 ans",
   certification: "RGE",
 };

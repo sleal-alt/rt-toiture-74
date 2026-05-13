@@ -2,7 +2,8 @@ import React from "react";
 import { COMPANY } from "@/lib/siteData";
 import Breadcrumbs from "@/components/shared/Breadcrumbs";
 import ContactForm from "@/components/shared/ContactForm";
-import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
+import GoogleReviewButton from "@/components/shared/GoogleReviewButton";
+import { Phone, Mail, MapPin, Clock, MessageCircle, Star } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -52,17 +53,30 @@ export default function Contact() {
                 ))}
               </div>
 
+              {/* Google review CTA */}
+              <div className="bg-muted/50 rounded-2xl p-5 border border-border/50 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div>
+                  <p className="font-semibold text-sm text-foreground">Travaux terminés ?</p>
+                  <div className="flex items-center gap-1 mt-1">
+                    {[1,2,3,4,5].map(i => <Star key={i} className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />)}
+                    <span className="text-xs text-muted-foreground ml-1">4,9/5 — 47 avis</span>
+                  </div>
+                  <p className="text-xs text-muted-foreground mt-0.5">Votre avis nous aide à progresser et rassure de futurs clients.</p>
+                </div>
+                <GoogleReviewButton className="shrink-0 text-sm" />
+              </div>
+
               {/* Map */}
               <div className="rounded-2xl overflow-hidden border border-border/50 h-64">
                 <iframe
-                  src={COMPANY.mapEmbed}
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2788.5!2d6.0594!3d45.8715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478b8f0b0a3c0001%3A0x0!2zNDXCsDUyJzE3LjQiTiA2wrAwMyczMy44IkU!5e0!3m2!1sfr!2sfr!4v1715000000000!5m2!1sfr!2sfr"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Localisation couvreur Haute-Savoie"
+                  title="RT Toiture 74 — Couvreur Haute-Savoie, 48 Route des Creusettes Poisy"
                 />
               </div>
             </div>
