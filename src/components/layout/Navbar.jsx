@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { COMPANY } from "@/lib/siteData";
+import { IMAGES } from "@/lib/images";
 import { Phone, Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
@@ -49,14 +50,8 @@ export default function Navbar() {
       {/* Main nav */}
       <header className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? "bg-background/95 backdrop-blur-md shadow-lg" : "bg-background"}`}>
         <div className="max-w-7xl mx-auto px-4 lg:px-6 flex items-center justify-between h-16 lg:h-20">
-          <Link to="/" className="flex items-center gap-3 shrink-0">
-            <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-heading font-bold text-lg">RT</span>
-            </div>
-            <div className="hidden sm:block">
-              <p className="font-heading font-bold text-base leading-tight text-foreground">RT Toiture 74</p>
-              <p className="text-xs text-muted-foreground">Couvreur Haute-Savoie</p>
-            </div>
+          <Link to="/" className="flex items-center gap-2 shrink-0">
+            <img src={IMAGES.logo} alt="RT Toiture 74 Logo" className="h-12 w-auto" />
           </Link>
 
           {/* Desktop nav */}
