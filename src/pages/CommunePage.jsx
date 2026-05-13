@@ -8,6 +8,7 @@ import ContactForm from "@/components/shared/ContactForm";
 import ServiceCard from "@/components/shared/ServiceCard";
 import { Phone, ArrowRight, MapPin, Shield, Clock, Award, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import CommunePhotoGallery from "@/components/shared/CommunePhotoGallery";
 
 function getCommuneContent(commune) {
   const name = commune.name;
@@ -132,6 +133,7 @@ export default function CommunePage() {
         </div>
       </section>
 
+      <CommunePhotoGallery commune={commune.name} />
       <FAQSection faqs={content.faqs} title={`FAQ — Couvreur ${commune.name}`} />
       <CTABand title={`Couvreur à ${commune.name} — Devis Gratuit`} />
     </>
