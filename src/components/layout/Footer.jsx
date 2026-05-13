@@ -61,7 +61,7 @@ export default function Footer() {
             <div className="flex gap-0.5">
               {[1,2,3,4,5].map(i => <Star key={i} className="w-3 h-3 fill-yellow-400 text-yellow-400" />)}
             </div>
-            <span className="text-xs text-accent-foreground/80 font-medium">4,9 — 47 avis</span>
+            <span className="text-xs text-accent-foreground/80 font-medium">4,9 — 8 avis</span>
             <ExternalLink className="w-3 h-3 text-accent-foreground/50" />
           </a>
 

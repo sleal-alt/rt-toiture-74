@@ -59,7 +59,7 @@ export default function Contact() {
                   <p className="font-semibold text-sm text-foreground">Travaux terminés ?</p>
                   <div className="flex items-center gap-1 mt-1">
                     {[1,2,3,4,5].map(i => <Star key={i} className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />)}
-                    <span className="text-xs text-muted-foreground ml-1">4,9/5 — 47 avis</span>
+                    <span className="text-xs text-muted-foreground ml-1">4,9/5 — 8 avis</span>
                   </div>
                   <p className="text-xs text-muted-foreground mt-0.5">Votre avis nous aide à progresser et rassure de futurs clients.</p>
                 </div>

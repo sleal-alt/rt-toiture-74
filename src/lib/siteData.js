@@ -13,7 +13,7 @@ export const COMPANY = {
   googleBusiness: "https://share.google/9bjVg8JW1pUi7lBct",
   googleReview: "https://share.google/9bjVg8JW1pUi7lBct",
   googleRating: 4.9,
-  googleReviewCount: 47,
+  googleReviewCount: 8,
   guarantee: "10 ans",
   certification: "RGE",
 };
