@@ -51,7 +51,7 @@ export default function Navbar() {
       <header className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? "bg-background/95 backdrop-blur-md shadow-lg" : "bg-background"}`}>
         <div className="max-w-7xl mx-auto px-4 lg:px-6 flex items-center justify-between h-16 lg:h-20">
           <Link to="/" className="flex items-center gap-2 shrink-0">
-            <img src={IMAGES.logo} alt="RT Toiture 74 Logo" className="h-12 w-auto" />
+            <img src={IMAGES.logo} alt="RT Toiture 74 Logo" className="h-20 w-auto" />
           </Link>
 
           {/* Desktop nav */}
