@@ -118,24 +118,24 @@ export const SERVICE_IMAGES = {
   ],
   "couverture-toiture": [
     {
-      url: "https://media.base44.com/images/public/6a040ea9436ccf8c732b004e/d7d49c6cd_generated_image.png",
-      alt: "Couvreur pose tuiles neuves toiture chalet alpin Haute-Savoie — réfection complète",
-      caption: "Pose de tuiles neuves en Haute-Savoie",
+      url: "https://media.base44.com/images/public/6a040ea9436ccf8c732b004e/bc3f267e6_generated_image.png",
+      alt: "Couvreur pose tuiles neuves toiture chalet alpin Haute-Savoie au coucher du soleil — changement de couverture",
+      caption: "Changement de couverture — pose tuiles neuves",
     },
     {
-      url: "https://media.base44.com/images/public/6a040ea9436ccf8c732b004e/f0a99bde9_generated_image.png",
-      alt: "Détail pose ardoises neuves maison montagne — couvreur artisan certifié Haute-Savoie",
-      caption: "Pose ardoises — travail soigné",
+      url: "https://media.base44.com/images/public/6a040ea9436ccf8c732b004e/e57c3f7dd_generated_image.png",
+      alt: "Réparation toiture ardoise chalet Haute-Savoie — remplacement ardoises cassées par artisan",
+      caption: "Réparation ardoises — travail soigné",
     },
     {
-      url: "https://media.base44.com/images/public/6a040ea9436ccf8c732b004e/62b5953fc_generated_image.png",
-      alt: "Réfection complète toiture chalet Haute-Savoie — résultat final tuiles ardoises",
-      caption: "Réfection complète — résultat final",
+      url: "https://media.base44.com/images/public/6a040ea9436ccf8c732b004e/763cc061d_generated_image.png",
+      alt: "Couvreur en hauteur réparation toiture chalet alpin Haute-Savoie sur échafaudage",
+      caption: "Intervention en hauteur sécurisée",
     },
     {
-      url: "https://media.base44.com/images/public/6a040ea9436ccf8c732b004e/7830ba511_generated_image.png",
-      alt: "Artisan couvreur certifié RGE sur toit chalet Haute-Savoie — sécurité et qualité",
-      caption: "Artisan certifié RGE — sécurité maximale",
+      url: "https://media.base44.com/images/public/6a040ea9436ccf8c732b004e/4b520bae9_generated_image.png",
+      alt: "Résultat final changement couverture toiture ardoise grise chalet Haute-Savoie — rénovation complète",
+      caption: "Résultat final — couverture neuve",
     },
   ],
   "etancheite-toit-terrasse-epdm": [
