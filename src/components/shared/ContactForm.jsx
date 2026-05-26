@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { base44 } from "@/api/base44Client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -15,21 +14,18 @@ export default function ContactForm({ source = "contact", compact = false }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSending(true);
-    await base44.integrations.Core.SendEmail({
-      to: "maldinireinhardt74@gmail.com",
-      subject: `Nouvelle demande de devis – RT Toiture 74 – ${form.nom}`,
-      body: `Nouvelle demande de devis reçue via le site RT Toiture 74
-
-Nom : ${form.nom}
-Téléphone : ${form.telephone}
-Email : ${form.email || "Non renseigné"}
-Ville : ${form.ville || "Non renseignée"}
-Prestation demandée : ${form.service || "Non précisée"}
-Date de la demande : ${new Date().toLocaleDateString("fr-FR", { day: "2-digit", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit" })}
-Source : ${source}
-
-Message :
-${form.message}`,
+    await fetch("https://formspree.io/f/meedpjvo", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify({
+        nom: form.nom,
+        telephone: form.telephone,
+        email: form.email || "Non renseigné",
+        ville: form.ville || "Non renseignée",
+        service: form.service || "Non précisée",
+        source,
+        message: form.message,
+      }),
     });
     setSent(true);
     setSending(false);
