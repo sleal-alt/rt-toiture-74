@@ -14,21 +14,30 @@ export default function ContactForm({ source = "contact", compact = false }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSending(true);
-    await fetch("https://formspree.io/f/meedpjvo", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "Accept": "application/json" },
-      body: JSON.stringify({
-        nom: form.nom,
-        telephone: form.telephone,
-        email: form.email || "Non renseigné",
-        ville: form.ville || "Non renseignée",
-        service: form.service || "Non précisée",
-        source,
-        message: form.message,
-      }),
-    });
-    setSent(true);
-    setSending(false);
+    try {
+      const res = await fetch("https://formspree.io/f/meedpjvo", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify({
+          nom: form.nom,
+          telephone: form.telephone,
+          email: form.email || "Non renseigné",
+          ville: form.ville || "Non renseignée",
+          service: form.service || "Non précisée",
+          source,
+          message: form.message,
+        }),
+      });
+      if (res.ok) {
+        setSent(true);
+      } else {
+        alert("Une erreur est survenue. Veuillez réessayer ou nous appeler directement.");
+      }
+    } catch {
+      alert("Une erreur est survenue. Veuillez réessayer ou nous appeler directement.");
+    } finally {
+      setSending(false);
+    }
   };
 
   if (sent) {
