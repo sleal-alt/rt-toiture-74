@@ -21,7 +21,6 @@ import MentionsLegales from './pages/MentionsLegales';
 import PolitiqueConfidentialite from './pages/PolitiqueConfidentialite';
 import PolitiqueCookies from './pages/PolitiqueCookies';
 import PlanDuSite from './pages/PlanDuSite';
-import Admin from './pages/Admin';
 import CookieBanner from './components/shared/CookieBanner';
 
 const AuthenticatedApp = () => {
@@ -62,7 +61,6 @@ const AuthenticatedApp = () => {
           <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
           <Route path="/cookies" element={<PolitiqueCookies />} />
           <Route path="/plan-du-site" element={<PlanDuSite />} />
-          <Route path="/admin" element={<Admin />} />
           <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>
