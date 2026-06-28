@@ -1,0 +1,52 @@
+{
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "commune",
+        "blog",
+        "service"
+      ],
+      "description": "Type de page g\u00e9n\u00e9r\u00e9e"
+    },
+    "slug": {
+      "type": "string",
+      "description": "Slug URL unique"
+    },
+    "title": {
+      "type": "string",
+      "description": "Titre SEO de la page"
+    },
+    "meta_description": {
+      "type": "string",
+      "description": "Meta description SEO"
+    },
+    "topic": {
+      "type": "string",
+      "description": "Sujet ou commune demand\u00e9"
+    },
+    "content": {
+      "type": "string",
+      "description": "Contenu HTML/Markdown de la page"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "published"
+      ],
+      "default": "draft"
+    },
+    "generated_by": {
+      "type": "string",
+      "description": "agent ou manual"
+    }
+  },
+  "required": [
+    "type",
+    "topic",
+    "status"
+  ],
+  "name": "GeneratedPage"
+}
